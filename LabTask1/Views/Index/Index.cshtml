@@ -1,0 +1,164 @@
+﻿@using LabTask1.Models
+@model LabTask1.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div style="width:50%; float:left">
+        <div style="width:64%; float:left">
+            <h3>A.&emsp;Registration</h3>
+            <form method="post">
+                <fieldset>
+                    <legend><b>REGISTRATION</b></legend>
+                    <table width="100%">
+                        <tr>
+                            <td>Name</td>
+
+                            <td>
+                                :<input type="text" name="pName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr /></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+
+                            <td>
+                                :<input type="email" name="pEmail" /><label><b>i</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr /></td>
+                        </tr>
+                        <tr>
+                            <td>User Name</td>
+
+                            <td>
+                                :<input type="text" name="pUN" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr /></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+
+                            <td>
+                                :<input type="password" name="pPw" pattern=".{6,}" title="Six or more characters" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr /></td>
+                        </tr>
+                        <tr>
+                            <td>Confirm Password</td>
+
+                            <td>
+                                :<input type="password" name="pCpw" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <fieldset>
+                                    <legend>Gender</legend>
+                                    <input type="radio" name="gender" value="1" checked />Male
+                                    <input type="radio" name="gender" value="2" />Female
+                                    <input type="radio" name="gender" value="3" />Other
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <fieldset>
+                                    <legend>Date of Birth</legend>
+                                    <input type="number" name="dd" max="31" min="01" maxlength="2" style="width:10%" />/
+                                    <input type="number" name="mm" max="12" min="01" maxlength="2" style="width:10%" />/
+                                    <input type="number" name="yyyy" min="1800" max="3000" maxlength="4" style="width:20%" />(dd/mm/yyyy)
+                                </fieldset>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="Submit" name="submit" />
+                                <input type="reset" value="Reset" name="Reset" />
+                                <br />
+                                <br />
+                            </td>
+
+                        </tr>
+
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+        </div>
+        <div style="width:50%; float:right">
+            <div style="width:64%; float:left">
+                <h3>B.&emsp;LOGIN</h3>
+                <form method="post">
+                    <fieldset>
+                        <legend><b>LOGIN</b></legend>
+                        <table width="100%" align="right">
+                            <tr>
+                                <td>User Name</td>
+
+                                <td>
+                                    :<input type="text" name="uUN" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Password</td>
+
+                                <td>
+                                    :<input type="password" name="uPw" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><hr /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="checkbox" name="remember" />Remember Me
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" value="Submit" name="login" />
+                                    <a href="#">Forgot Password?</a>
+                                    <br />
+                                    <br />
+                                </td>
+
+                            </tr>
+
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+</body>
+
+
+</html>
